@@ -28,7 +28,7 @@ function AnimatedShapes() {
         <mesh position={[0, 0, -3]} rotation={[0.4, 0.2, 0.5]}>
           <torusKnotGeometry args={[1.5, 0.4, 128, 32]} />
           <meshStandardMaterial
-            color="#41c9ffff"
+            color="#8a2be2"
             wireframe
             transparent
             opacity={0.15}
