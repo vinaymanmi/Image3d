@@ -7,9 +7,9 @@ function AnimatedShapes() {
       <ambientLight intensity={0.5} />
       <directionalLight position={[10, 10, 5]} intensity={1} />
 
-      {/* Floating sphere with distorted liquid material */}
+      {/* Floating sphere with distorted liquid material in the center */}
       <Float speed={2} rotationIntensity={1} floatIntensity={2} floatingRange={[-0.5, 0.5]}>
-        <Sphere args={[1, 64, 64]} position={[3, 0, -3]} scale={1.8}>
+        <Sphere args={[1, 64, 64]} position={[0, 0, -3]} scale={2.5}>
           <MeshDistortMaterial
             color="var(--color-neon)"
             attach="material"
@@ -18,20 +18,20 @@ function AnimatedShapes() {
             roughness={0.2}
             metalness={0.8}
             transparent
-            opacity={0.15}
+            opacity={0.2}
           />
         </Sphere>
       </Float>
 
-      {/* Floating wireframe torus knot */}
+      {/* Floating wireframe torus knot layered over the sphere */}
       <Float speed={1.5} rotationIntensity={2} floatIntensity={3} floatingRange={[-1, 1]}>
-        <mesh position={[-4, -1, -5]} rotation={[0.4, 0.2, 0.5]}>
-          <torusKnotGeometry args={[1, 0.3, 128, 32]} />
+        <mesh position={[0, 0, -3]} rotation={[0.4, 0.2, 0.5]}>
+          <torusKnotGeometry args={[1.5, 0.4, 128, 32]} />
           <meshStandardMaterial
-            color="#8a2be2"
+            color="#41c9ffff"
             wireframe
             transparent
-            opacity={0.1}
+            opacity={0.15}
           />
         </mesh>
       </Float>
